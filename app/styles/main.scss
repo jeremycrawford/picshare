@@ -31,7 +31,7 @@ body * {
 
 
     .picshare-sub-logo {
-        opacity: .9;
+        opacity: 0.7;
         display: inline-block;
         padding-top: 12px;
         width: 40px;
@@ -90,7 +90,7 @@ body * {
         height: auto;
 
         .picshare-main-logo {
-            opacity: .5;
+            opacity: 0.7;
             position: relative;
             z-index: 5;
             display: inline;
@@ -125,60 +125,73 @@ body * {
             width: 650px;
             position: relative;
             height: 330px;
-            background-color: rgba(226, 226, 224, .9);
+            background-color: rgba(226, 226, 224, .8);
             border-radius: 6px;
+            -webkit-transition: all 1s ease;
 
-            .inputtainer {
+            &.inputfieldchange {
+                z-index: 5;
                 text-align: center;
-                margin: auto auto  ;
+                margin: auto auto;
                 width: 650px;
-
-                .join-cont {
-                    padding-top: 20px;
-                    width: 100%;
-                
-
-                    .join {
-                        text-transform: uppercase;
-                        font-weight: 100;
-                        font-size: 32px;
-                        letter-spacing: 2px;
-                        width: 100%;
-                        text-align: center;
-                    }
-
-                    .easy {
-                        font-weight: 100;
-                        font-size: 20px;
-                        letter-spacing: 2px;
-                        width: 100%;
-                        line-height: 3px;
-                    }
-                }
-
-                    .in-username {
-                    @include inputvalue
-                    }
-
-                    .in-profilepic {
-                    @include inputvalue
-                    }    
-
-                    .in-galleryimg {
-                    @include inputvalue
-                    }               
-
-                    .submit {
-                        color: rgba(45, 45, 45, .5);
-                        text-transform: uppercase;
-                        margin-top: 20px;
-                        width: 100px;
-                        height: 40px;
-                        border-radius: 4px;
-                        font-size: 18px;
-                    }
-                }
+                position: relative;
+                height: 330px;
+                background-color: rgba(226, 226, 224, 1);
+                border-radius: 6px;
+                -webkit-transition: all 1s ease;
             }  
+
+                .inputtainer {
+                    text-align: center;
+                    margin: auto auto  ;
+                    width: 650px;
+
+                    .join-cont {
+                        padding-top: 20px;
+                        width: 100%;
+                    
+
+                        .join {
+                            text-transform: uppercase;
+                            font-weight: 100;
+                            font-size: 32px;
+                            letter-spacing: 2px;
+                            width: 100%;
+                            text-align: center;
+                        }
+
+                        .easy {
+                            font-weight: 100;
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                            width: 100%;
+                            line-height: 3px;
+                        }
+                    }
+
+                        .in-username {
+                        @include inputvalue
+                        }
+
+                        .in-profilepic {
+                        @include inputvalue
+                        }    
+
+                        .in-galleryimg {
+                        @include inputvalue
+                        }               
+
+                        .submit {
+                            color: rgba(45, 45, 45, .5);
+                            text-transform: uppercase;
+                            margin-top: 20px;
+                            width: 100px;
+                            height: 40px;
+                            border-radius: 4px;
+                            font-size: 18px;
+                        }
+                    }
+                }
         }
       
 
@@ -193,7 +206,7 @@ body * {
         overflow: hidden;
         background-color: rgba(92, 155, 135, .9);
 
-        .ceneteravatarcontainer {
+        .centeravatarcontainer {
             text-align: center;
             margin: 50px auto;
             width: 960px;

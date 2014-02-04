@@ -1,43 +1,34 @@
-$('h1').hover(function() {
-  $(this).toggleClass('fontchange');
+
+var userProfiles = [];
+
+// Submit button
+// This is the section that I'm learning. Study this like crazy!!!
+
+console.log($('.avatar-template').text());
+var profileTemplate = _.template($('.avatar-template').text());		// This calls to the script inside the index.
+
+
+$('.submit').click(function() {
+	// console.log($('.in-username').val());
+	var profile = {};
+		profile.name = $('.in-username').val()
+		profile.profilepic = $('.in-profilepic').val()
+		userProfiles.push(profile);
+		console.log(userProfiles.length);
+
+
+	$('.centeravatarcontainer').append(
+		profileTemplate(
+		profile
+		));														// This already has what it needs.
 });
 
-$('.picshare-sub-logo').hover(
-	function() {
-    $(this).stop().fadeTo('slow', 0.2);
-	},
-	function() {
-    $(this).stop().fadeTo('slow', 1);
-});
-
-// $('.picshare-main-logo').hover(function() {
-//   $(this).toggleClass('fast');
-// });
-
-$('.picshare-main-logo').hover(
-	function() {
-  	$(this).stop().fadeTo('slow', 1);
-    },
-    function() {
-  	$(this).stop().fadeTo('slow', 0.5);
-});
-
-
-// $('#show').hover(
-//   function () {
-//     $(this).fadeOut("slow");
-//   }, 
-//   function () {
-//     $(this).fadeIn("slow");
-//   }
-// );
 
 
 
 
-// $('h1').mouseout(function() {
-//   $(this).show('fontchange');
-// });
+
+
 
 
 
@@ -51,74 +42,33 @@ $('.picshare-main-logo').hover(
 //   $(this).children('.caption').hide()
 // });
 
-
-
-
-
-
-
-// <div class="button thirteen">
-//    <div class="white-box-two"></div>
-// </div>
-
-
-// .white-box-two {
-//         position: relative;
-//         display: inline-block;
-//         margin: -4px auto;
-//         height: 20px;
-//         width: 20px;
-//         background: rgb(223, 107, 99);
-//         -webkit-transition: all 2s ease;
-
-//         &.spin {
-//             margin: 4px auto;
-//             position: relative;
-//             display: inline-block;
-//             background: white;
-//             width: 10px;
-//             height: 10px;
-//             -webkit-transition: all 2s ease;
-//             -webkit-transform: rotate(180deg);
-//         }
-
-// $('.thirteen').hover(function(){
-// 	console.log('box spins when hovered');
-
-// 	$('.white-box-two').toggleClass('spin');
-// });
-
-
-
-
-
-
 // $('img').hover(function(){
 //     $(this).attr('src','images/Market.png');
 // },function(){
 //      $(this).attr('src','images/tile_4.jpg'); 
 // });
 
+$('h1').hover(function() {
+  $(this).toggleClass('fontchange');
+});
 
+$('.picshare-sub-logo').hover(
+	function() {
+    $(this).stop().fadeTo('slow', 0.9);
+	},
+	function() {
+    $(this).stop().fadeTo('slow', 0.7);
+});
 
+$('.picshare-main-logo').hover(
+	function() {
+  	$(this).stop().fadeTo('slow', 1);
+    },
+    function() {
+  	$(this).stop().fadeTo('slow', 0.7);
+});
 
-
-// $('.logo').mouseout(function() {
-//   $(this)('.picshare-main-logo-black').fadeOut()
-// });
-
-
-// $('.thirteen').hover(function(){
-// 	console.log('box spins when hovered');
-
-// 	$('.white-box-two').toggleClass('spin');
-// });
-
-
-// $( "a" ).click(function() {
-//   $( "div" ).fadeIn( 3000, function() {
-//     $( "span" ).fadeIn( 100 );
-//   });
-//   return false;
-// });
-
+$('.inputfield').hover(
+	function() {
+	$(this).toggleClass('inputfieldchange');
+});
