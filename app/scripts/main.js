@@ -2,7 +2,7 @@
 var userProfiles = [];
 
 // Submit button
-// This is the section that I'm learning. Study this like crazy!!!
+// This is the section that I'm learning.
 
 console.log($('.avatar-template').text());
 var profileTemplate = _.template($('.avatar-template').text());		// This calls to the script inside the index.
